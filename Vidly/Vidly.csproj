@@ -212,6 +212,22 @@
     <Compile Include="Migrations\201902172027390_addRecordsWithBirthdate.Designer.cs">
       <DependentUpon>201902172027390_addRecordsWithBirthdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902172149576_addGenreToMovies.cs" />
+    <Compile Include="Migrations\201902172149576_addGenreToMovies.Designer.cs">
+      <DependentUpon>201902172149576_addGenreToMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902172314053_addOtherPropertiesToMovieClass.cs" />
+    <Compile Include="Migrations\201902172314053_addOtherPropertiesToMovieClass.Designer.cs">
+      <DependentUpon>201902172314053_addOtherPropertiesToMovieClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902172315461_DateAddedIsNotNull.cs" />
+    <Compile Include="Migrations\201902172315461_DateAddedIsNotNull.Designer.cs">
+      <DependentUpon>201902172315461_DateAddedIsNotNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902172317154_addRecordstoMoviesTables.cs" />
+    <Compile Include="Migrations\201902172317154_addRecordstoMoviesTables.Designer.cs">
+      <DependentUpon>201902172317154_addRecordstoMoviesTables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -285,6 +301,7 @@
     <None Include="Views\Customers\Details.cshtml" />
     <None Include="Views\Customers\Index.cshtml" />
     <None Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -329,6 +346,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902172027390_addRecordsWithBirthdate.resx">
       <DependentUpon>201902172027390_addRecordsWithBirthdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902172149576_addGenreToMovies.resx">
+      <DependentUpon>201902172149576_addGenreToMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902172314053_addOtherPropertiesToMovieClass.resx">
+      <DependentUpon>201902172314053_addOtherPropertiesToMovieClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902172315461_DateAddedIsNotNull.resx">
+      <DependentUpon>201902172315461_DateAddedIsNotNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902172317154_addRecordstoMoviesTables.resx">
+      <DependentUpon>201902172317154_addRecordstoMoviesTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
