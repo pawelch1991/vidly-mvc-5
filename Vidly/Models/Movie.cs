@@ -12,6 +12,8 @@ namespace Vidly.Models
         public string Name { get; set; }
         [Required]
         public string Genre { get; set; }
+        
+        [Display(Name = "Release Date")]
         [Required]
         public DateTime ReleaseDate { get; set; }
         [Required]
