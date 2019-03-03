@@ -42,14 +42,14 @@ namespace Vidly.Controllers
             if (movie == null)
                 return HttpNotFound();
 
-            return View(movie);
+            return View("MovieForm", movie);
         }
 
         public ActionResult New()
         {
             Movie movie = new Movie();
 
-            return View(movie);
+            return View("MovieForm", movie);
         }
 
         public ActionResult Save(Movie movie)
