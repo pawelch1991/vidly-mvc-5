@@ -228,6 +228,22 @@
     <Compile Include="Migrations\201902172317154_addRecordstoMoviesTables.Designer.cs">
       <DependentUpon>201902172317154_addRecordstoMoviesTables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903032302303_addGenresTabel.cs" />
+    <Compile Include="Migrations\201903032302303_addGenresTabel.Designer.cs">
+      <DependentUpon>201903032302303_addGenresTabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903032303101_PopulateGenres.cs" />
+    <Compile Include="Migrations\201903032303101_PopulateGenres.Designer.cs">
+      <DependentUpon>201903032303101_PopulateGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903032318213_modifyMovieModel.cs" />
+    <Compile Include="Migrations\201903032318213_modifyMovieModel.Designer.cs">
+      <DependentUpon>201903032318213_modifyMovieModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903032328358_mofifyMovieModel.cs" />
+    <Compile Include="Migrations\201903032328358_mofifyMovieModel.Designer.cs">
+      <DependentUpon>201903032328358_mofifyMovieModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -363,6 +379,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902172317154_addRecordstoMoviesTables.resx">
       <DependentUpon>201902172317154_addRecordstoMoviesTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903032302303_addGenresTabel.resx">
+      <DependentUpon>201903032302303_addGenresTabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903032303101_PopulateGenres.resx">
+      <DependentUpon>201903032303101_PopulateGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903032318213_modifyMovieModel.resx">
+      <DependentUpon>201903032318213_modifyMovieModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903032328358_mofifyMovieModel.resx">
+      <DependentUpon>201903032328358_mofifyMovieModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
