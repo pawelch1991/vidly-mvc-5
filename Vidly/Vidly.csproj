@@ -244,6 +244,10 @@
     <Compile Include="Migrations\201903032328358_mofifyMovieModel.Designer.cs">
       <DependentUpon>201903032328358_mofifyMovieModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903032341359_seedDatabaseWithGenres.cs" />
+    <Compile Include="Migrations\201903032341359_seedDatabaseWithGenres.Designer.cs">
+      <DependentUpon>201903032341359_seedDatabaseWithGenres.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -391,6 +395,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903032328358_mofifyMovieModel.resx">
       <DependentUpon>201903032328358_mofifyMovieModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903032341359_seedDatabaseWithGenres.resx">
+      <DependentUpon>201903032341359_seedDatabaseWithGenres.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
