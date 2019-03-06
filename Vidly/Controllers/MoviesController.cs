@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using Vidly.Models;
@@ -41,8 +42,13 @@ namespace Vidly.Controllers
 
             if (movie == null)
                 return HttpNotFound();
+            
+            var viewModel = new MovieFormViewModel(movie)
+            {
+                Genres = _context.Genres.ToList()
+            };
 
-            return View("MovieForm", movie);
+            return View("MovieForm", viewModel);
         }
 
         public ActionResult New()
@@ -59,21 +65,34 @@ namespace Vidly.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Save(Movie movie)
         {
-            if (movie.Id == 0)
-                _context.Movies.Add(movie);
-            else
+            if (!ModelState.IsValid)
             {
-                var movieInDb = _context.Movies.SingleOrDefault(m => m.Id == movie.Id);
+                var viewModel = new MovieFormViewModel
+                {
+                    Genres = _context.Genres.ToList(),
+                };
 
-                movieInDb.Name = movie.Name;
-                movieInDb.ReleaseDate = movie.ReleaseDate;
-                movieInDb.Genre = movie.Genre;
-                movieInDb.NumberInStock = movie.NumberInStock;
+                return View("MovieForm", viewModel);
             }
+            
+                if (movie.Id == 0)
+                {
+                    movie.DateAdded = DateTime.Now;
+                    _context.Movies.Add(movie);
+                }
+                else
+                {
+                    var movieInDb = _context.Movies.SingleOrDefault(m => m.Id == movie.Id);
 
-            _context.SaveChanges();
+                    movieInDb.Name = movie.Name;
+                    movieInDb.ReleaseDate = movie.ReleaseDate;
+                    movieInDb.GenreId = movie.GenreId;
+                    movieInDb.NumberInStock = movie.NumberInStock;
+                }
 
-            return RedirectToAction("Index", "Movies");
+                _context.SaveChanges();
+
+                return RedirectToAction("Index", "Movies");
         }
 
         // GET: Movies/Random

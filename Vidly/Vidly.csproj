@@ -248,6 +248,14 @@
     <Compile Include="Migrations\201903032341359_seedDatabaseWithGenres.Designer.cs">
       <DependentUpon>201903032341359_seedDatabaseWithGenres.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903061232157_updateMovieModel.cs" />
+    <Compile Include="Migrations\201903061232157_updateMovieModel.Designer.cs">
+      <DependentUpon>201903061232157_updateMovieModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903061415337_updateMovieModel1.cs" />
+    <Compile Include="Migrations\201903061415337_updateMovieModel1.Designer.cs">
+      <DependentUpon>201903061415337_updateMovieModel1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -398,6 +406,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903032341359_seedDatabaseWithGenres.resx">
       <DependentUpon>201903032341359_seedDatabaseWithGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903061232157_updateMovieModel.resx">
+      <DependentUpon>201903061232157_updateMovieModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903061415337_updateMovieModel1.resx">
+      <DependentUpon>201903061415337_updateMovieModel1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
