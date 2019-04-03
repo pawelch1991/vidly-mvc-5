@@ -9,11 +9,12 @@
 <p>
     @Html.ActionLink("New Movie", "New", "Movies", null, new { @class = "btn btn primary"})
 </p>
-<table class="table table-bordered table-hover">
+<table id="movies" class="table table-bordered table-hover">
     <thead>
         <tr>
             <th>Movie</th>
             <th>Genre</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -26,3 +27,29 @@
         }
     </tbody>
 </table>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            var table = $("#movies").DataTable({
+                ajax: {
+                    url: "/api/movies",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "name",
+                        render: function (data, type, movie) {
+                            return "<a href='/movies/edit/'" + movie.id + "'>" + movie.name + "</a>";
+                        }
+                    },
+                    {
+                        data:
+                    }
+                ]
+            })
+        });
+
+    </script>
+}
