@@ -57,7 +57,7 @@ namespace Vidly.Controllers.Api
 
         // PUT /api/movies
         [HttpPut]
-        public IHttpActionResult UpdateMovie (int id, MovieDto movieDto)
+        public IHttpActionResult UpdateMovie(int id, MovieDto movieDto)
         {
             if (!ModelState.IsValid)
                 return BadRequest();
