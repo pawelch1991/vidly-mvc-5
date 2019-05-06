@@ -7,6 +7,7 @@ namespace Vidly.Migrations
     {
         public override void Up()
         {
+            Sql("DELETE FROM [aspnet-Vidly-20190330105730].[dbo].[Movies] WHERE [NumberInStock] IS NOT NULL");
             AddColumn("dbo.Movies", "GenreId", c => c.Byte(nullable: false));
             CreateIndex("dbo.Movies", "GenreId");
             AddForeignKey("dbo.Movies", "GenreId", "dbo.Genres", "Id", cascadeDelete: true);
